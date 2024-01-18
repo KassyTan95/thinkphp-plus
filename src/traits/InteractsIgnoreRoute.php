@@ -9,8 +9,8 @@
 
 namespace Kassy\ThinkphpPlus\traits;
 
-use common\annotation\IgnoreTokenRouting;
 use Ergebnis\Classy\Constructs;
+use Kassy\ThinkphpPlus\annotation\IgnoreTokenRouting;
 use ReflectionClass;
 use ReflectionMethod;
 use think\annotation\route\Group;
