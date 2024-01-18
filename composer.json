@@ -17,7 +17,6 @@
       "email": "kassyt@126.com"
     }
   ],
-  "minimum-stability": "stable",
   "require": {
     "php": ">=8.0",
     "topthink/framework": "^6.0.0",
