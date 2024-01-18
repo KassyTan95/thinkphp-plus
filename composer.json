@@ -1,0 +1,45 @@
+{
+  "name": "kassy/thinkphp-plus",
+  "description": "thinkphp addon",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Kassy\\ThinkphpPlus\\": "src/"
+    },
+    "files": [
+      "src/helper.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Kassy",
+      "email": "kassyt@126.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.0",
+    "topthink/framework": "^6.0.0",
+    "topthink/think-filesystem": "^1.0",
+    "topthink/think-annotation": "^2.0",
+    "thans/tp-jwt-auth": "^2.2",
+    "overtrue/wechat": "~5.0",
+    "overtrue/easy-sms": "^2.4",
+    "alipaysdk/easysdk": "^2.0",
+    "death_satan/think-dto": "^1.0",
+    "zoujingli/ip2region": "^2.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "easywechat-composer/easywechat-composer": true
+    }
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "Kassy\\ThinkphpPlus\\AnnotationService"
+      ]
+    }
+  }
+}
