@@ -133,7 +133,7 @@ class AuthCore
                 $userAuth = $this->handleAuthData(self::fullAuthData());
             } else {
                 $ownMenu = $this->AdministratorMenu
-                    ->where('id', 'in', $userAuthData['roleInfo']['rules'])
+                    ::where('id', 'in', $userAuthData['roleInfo']['rules'])
                     ->field('id,pid,name,path,component,meta,apiList')
                     ->order(['sort' => 'desc', 'id' => 'desc'])
                     ->select();
@@ -192,7 +192,7 @@ class AuthCore
     private function fullAuthData(): array
     {
         return $this->AdministratorMenu
-            ->where('id', '>', 0)
+            ::where('id', '>', 0)
             ->field('id,pid,name,path,component,meta,apiList')
             ->order(['sort' => 'asc', 'createAt' => 'asc'])
             ->select()
@@ -209,7 +209,7 @@ class AuthCore
     private function ownAuthData(): mixed
     {
         return $this->Administrator
-            ->where([
+            ::where([
                 ['id', '=', $this->id],
                 ['status', '=', 1]
             ])
