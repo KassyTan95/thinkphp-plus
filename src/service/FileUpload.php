@@ -86,7 +86,7 @@ class FileUpload
     public function checkExist($md5): mixed
     {
         return $this->model
-            ->where('md5', $md5)
+            ::where('md5', $md5)
             ->field('id,url')
             ->find();
     }
